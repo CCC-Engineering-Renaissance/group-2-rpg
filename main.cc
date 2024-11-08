@@ -7,6 +7,7 @@
 int main(){
   vector<vector<map>> char; // You can use a 2D vector if you'd like, but it's a lot better to emulate a 2D vector with a 1D one.
 cout << "Hello World" << endl;
+cout << "Someting" << endl;
 
   // This is where all your logic will go
   while (true){
