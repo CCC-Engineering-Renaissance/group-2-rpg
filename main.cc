@@ -5,7 +5,7 @@
 #include <iomanip>
 
 int main(){
-  vector<vector<map>> char; // You can use a 2D vector if you'd like, but it's a lot better to emulate a 2D vector with a 1D one.
+ /* vector<vector<map>> char; // You can use a 2D vector if you'd like, but it's a lot better to emulate a 2D vector with a 1D one.
 cout << "Hello World" << endl;
 cout << "Someting" << endl;
 cout << "jkdsfjhkdsjhkgdsgjhk";
@@ -18,6 +18,5 @@ while (true)
   // TODO Move character or something cool using the user's input
 
   // TODO: Output map
-
+*/
   }
-}
