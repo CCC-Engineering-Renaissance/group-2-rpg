@@ -11,6 +11,7 @@ using namespace std;
 void date();
 
 int main(){
+<<<<<<< HEAD
 vector<string> room1, room2, room3, room4; 
 // You can use a 2D vector if you'd like, but it's a lot better to emulate a 2D vector with a 1D one.
 
@@ -63,6 +64,14 @@ room4 = {
 */
 
 
+=======
+ /* vector<vector<map>> char; // You can use a 2D vector if you'd like, but it's a lot better to emulate a 2D vector with a 1D one.
+cout << "Hello World" << endl;
+cout << "Someting" << endl;
+cout << "jkdsfjhkdsjhkgdsgjhk";
+
+a
+>>>>>>> 57bd317e94242a0143f145a52f0088f24794a4a7
 
 // This is where all your logic will go
 while (1 > 2)
