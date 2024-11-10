@@ -31,7 +31,8 @@ int main() {
     
     // the answer vector
     vector<int> answer = {1, 2, 3};
-    int guesses_needed = answer.size();
+    int long guesses_needed;
+    guesses_needed = answer.size();
     
     //stuff for user to guess
     int guessed;
