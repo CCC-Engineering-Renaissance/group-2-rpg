@@ -7,6 +7,9 @@ notes:
  * possibly make a board and line up guesses like real wordle 
      however we might need colors as to not confuse color
  * maybe additionally add a feature to tell user if the number they added exist within the answer but its just in wrong spot
+
+ (idk why this dont work on VS code sorry isabelle if u try running it, i had used xcode to run and test it)
+ - mason
 */
 
 #include <iostream>
