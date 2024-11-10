@@ -1,3 +1,14 @@
+/*
+The code currently only tells the user if a number is in the correct place or not
+once all places are correct it prints yay, and the the programs ends
+
+notes:
+ * once we figure out map we can convert this into a function easily 
+ * possibly make a board and line up guesses like real wordle 
+     however we might need colors as to not confuse color
+ * maybe additionally add a feature to tell user if the number they added exist within the answer but its just in wrong spot
+*/
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>
