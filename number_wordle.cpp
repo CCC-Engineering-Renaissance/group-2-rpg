@@ -3,8 +3,8 @@ The code currently only tells the user if a number is in the correct place or no
 once all places are correct it prints yay, and the the programs ends
 
 notes:
- * once we figure out map we can convert this into a function easily 
- * possibly make a board and line up guesses like real wordle 
+ * once we figure out map we can convert this into a function easily
+ * possibly make a board and line up guesses like real wordle
      however we might need colors as to not confuse color
  * maybe additionally add a feature to tell user if the number they added exist within the answer but its just in wrong spot
 
@@ -20,63 +20,57 @@ notes:
 using namespace std;
 
 int main() {
-    //introducing the rules
-    cout << "welcome to number wordle" << endl << "in this game you will be guessing a sequence of numbers untill correct";
-    cout << endl << "if that didnt make sense go play real wordle and figure it out" << endl;
+    //creating the vector for the answer
+    vector<int> answer = {1, 2 ,3};
     
-    //printing out the game board
-    //idk if i want to make a board
-    // unless we learn how to use colors might just be confusing for user
-    vector<string> board;
+    //getting size of vector to use in for loops
+    //so we can chnage amount of numbers answe has later
+    long int size;
+    size = answer.size();
     
-    // the answer vector
-    vector<int> answer = {1, 2, 3};
-    int long guesses_needed;
-    guesses_needed = answer.size();
+    //allowig user to input a guess
+    vector<int> users_guess(size);
     
-    //stuff for user to guess
-    int guessed;
-    vector<int> guess;
-    
-    
-    //asking using for the three guesses for wordle
-    for (int i = 1; i <= guesses_needed; i++) {
-        cout << "enter guess " << i << ": ";
-        cin >> guessed;
-        // cout << guessed << endl;
-        guess.push_back(guessed);
-    }
-    
-    
-    // this will be used in a while loop to let user keep guessing
-    int amount_correct = 0;
-    
-    
-    while (amount_correct < guesses_needed)  {
-        // amount correct gets reset to 0 after every trail run
-        amount_correct = 0;
-        for(int i = 0; i < guesses_needed; i++) {
-            if (answer.at(i) == guess.at(i)) {
-                cout << "you have the number in the " << i+1 << " postion correct" << endl;
-                amount_correct++;
-            }
-            else {
-                cout << "the number in the " << i+1 << " spot is incorrect" << endl;
-                amount_correct--;
-            }
-        } // ends for loop
-        
-        //allows user to guess again
-        if (amount_correct != 3) {
-            //asking using for the three guesses for wordle
-            for (int i = 1; i <= answer.size(); i++) {
-                cout << "enter guess " << i << ": ";
-                cin >> guessed;
-                guess.push_back(guessed);
-            }
-        }  // ends while loop
+    //temp varaible to push numbers into a vector
+    int temp;
+    cout << "enter 3 numbers" << endl;
+    for (int i = 0;  i < size; i++) {
+        cout << "number " << i+1 << " : ";
+        cin >> temp;
+        users_guess.at(i) = temp;
         
     }
-    cout << "yay you found the super easy password";
-    
+    // varaible to check how many values match
+    int correct_answers = 0;
+
+    //while loop getting user to keep trying till there correct
+
+    while (correct_answers != size) {
+    for (int i = 0; i < size; i++) {
+        if (answer.at(i) == users_guess.at(i)) {
+            cout << "the " << i + 1 << " number is correct" << endl;
+            // adding 1 to correct answer to see if it matches size at end of loop
+            correct_answers++;
+        }
+        else {
+            cout << "the " << i + 1 << " number is incorrect" << endl;
+        }
+    }
+        if (correct_answers != size) {
+            //clearing vector
+            for(int i = 0; i < size; i++) {
+                users_guess.at(i) = 0;
+            }
+            // allow user to retry
+            cout << "try again" << endl;
+            for (int i = 0;  i < size; i++) {
+                cout << "number " << i+1 << " : ";
+                cin >> temp;
+                users_guess.at(i) = temp;
+            }
+            //reset amount user got correct back to 0
+            correct_answers = 0;
+        }
+    }
+    cout << "yay" << endl;
 }
