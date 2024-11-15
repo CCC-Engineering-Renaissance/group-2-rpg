@@ -5,7 +5,7 @@ using namespace std;
 
 
 void puzzle_2_1() {
-cout << "You see a lovely portrait of a king, queen, and their two sons.\n" 
+cout << "You see a lovely portrait of a king, queen, and their two sons.\n"; 
 cout << "One son is just a baby, but the other one looks much older.\n"; 
 cout << "Underneath the portrait, it says that both sons are named Ace.\n";
   }
@@ -32,13 +32,17 @@ while(true) {
   else if (people > 34) {
   cout << "Either you're very popular, or you're lying. Either way, just pick a lower number.\n";
   }
-	else {
+  else if (people > 1 && people < 34) {
   peoplemissing = 34 - people;
   cout << "Yikes! Looks like " << peoplemissing << " people didn't show up…\n";
   cout << "When you put in the passcode, make sure you use the number of people that *should* have been there.\n"; 
   cout << "See yourself later!\n";
   break;
-}}} 
+ }
+  else {
+	cout << "Talk to me again if you want to take this seriously.\n";
+	break;
+  }}} 
 // This is the third puzzle of room 3. All the capitalized letters correspond to Roman Numerals. The answer for this puzzle is 4.
 void puzzle_2_3() {
 cout << "You bunk your head on the ceiling and notice someone wrote on it.\n";
@@ -57,7 +61,7 @@ cout << "Please enter the passcode: ";
 while(true) {
     cin >> passcode_2;
 	if (passcode_2 > 999 || passcode_2 < 100) {
-		cout << "The passcode is a three digit number.\n";
+		cout << "The passcode is a positive, three digit integer.\n";
 		cout << "Please try again: ";
 		}
 	else if (passcode_2 == 574) {
