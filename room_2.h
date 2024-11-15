@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 
-
+// This is the first puzzle of room 2. This puzzle utilizes Blackjack values (king, queen, ace 1, ace 11). The answer for this puzzle is 5.
 void puzzle_2_1() {
 cout << "You see a lovely portrait of a king, queen, and their two sons.\n"; 
 cout << "One son is just a baby, but the other one looks much older.\n"; 
