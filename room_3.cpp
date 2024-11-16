@@ -62,12 +62,12 @@ cout << "If you need to go back and look at the puzzles, enter 0 to cancel.";
 cin.get();
 cout << "Please enter the passcode: ";
 while(true) {
-    cin >> passcode_2;
-	if (passcode_2 > 999 || passcode_2 < 100) {
+    cin >> passcode_3;
+	if (passcode_3 > 999 || passcode_2 < 100) {
 		cout << "The passcode is a three digit integer.\n";
 		cout << "Please try again: ";
 		}
-	else if (passcode_2 == 192) {
+	else if (passcode_3 == 192) {
 		cout << "The room goes dark for a second.\n";
 		cin.get();
 		// switch map from Room 3 to Room 4
@@ -79,7 +79,7 @@ cout << "Sorry again.";
 cin.get();
 		break;
 		}
-	else if (passcode_2 == 0) {
+	else if (passcode_3 == 0) {
 		break;
 		}
 	else {
