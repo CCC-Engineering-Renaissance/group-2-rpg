@@ -1,16 +1,3 @@
-/*
-The code currently only tells the user if a number is in the correct place or not
-once all places are correct it prints yay, and the the programs ends
-
-notes:
- * once we figure out map we can convert this into a function easily
- * possibly make a board and line up guesses like real wordle
-     however we might need colors as to not confuse color
- * maybe additionally add a feature to tell user if the number they added exist within the answer but its just in wrong spot
-
- (idk why this dont work on VS code sorry isabelle if u try running it, i had used xcode to run and test it)
- - mason
-*/
 
 #include <iostream>
 #include <cmath>
@@ -42,20 +29,41 @@ int main() {
     }
     // varaible to check how many values match
     int correct_answers = 0;
+    vector<string> result;
+    string result_temp;
 
     //while loop getting user to keep trying till there correct
 
     while (correct_answers != size) {
     for (int i = 0; i < size; i++) {
         if (answer.at(i) == users_guess.at(i)) {
-            cout << "the " << i + 1 << " number is correct" << endl;
             // adding 1 to correct answer to see if it matches size at end of loop
             correct_answers++;
+            result_temp = 'c';
+            result.push_back(result_temp);
         }
         else {
-            cout << "the " << i + 1 << " number is incorrect" << endl;
+            // if answer exist just in wrong place
+            auto it = find(answer.begin(), answer.end(), users_guess.at(i));
+            if (it != answer.end()) {
+                result_temp = 'w';
+                result.push_back(result_temp);
+            }
+            else // answer isnt found
+                result_temp = 'x';
+                result.push_back(result_temp);
         }
     }
+        cout << "you input: ";
+        for (int i = 0; i < size; i++)  {
+            cout << users_guess.at(i) << " ";
+        }
+        cout << "\nc = correct place\nw = number is wrong place\nX = the number doesnt exist\n";
+        cout << "your result is: ";
+        for (string i : result)
+        {
+            cout << i << " ";
+            }
         if (correct_answers != size) {
             //clearing vector
             for(int i = 0; i < size; i++) {
@@ -70,7 +78,9 @@ int main() {
             }
             //reset amount user got correct back to 0
             correct_answers = 0;
+            result.clear();
+
         }
     }
-    cout << "yay" << endl;
+    cout << "\nyay" << endl;
 }
