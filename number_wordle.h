@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-int main() {
+void number_wordle() {
     //creating the vector for the answer
     vector<int> answer = {4, 2, 9, 3 ,11};
     
@@ -20,9 +20,9 @@ int main() {
     
     //temp varaible to push numbers into a vector
     int temp;
-    cout << "enter 3 numbers" << endl;
+    cout << "Enter each number one at a time." << endl;
     for (int i = 0;  i < size; i++) {
-        cout << "number " << i+1 << " : ";
+        cout << "Blank " << i+1 << " : ";
         cin >> temp;
         users_guess.at(i) = temp;
         
@@ -54,12 +54,12 @@ int main() {
                 result.push_back(result_temp);
         }
     }
-        cout << "you input: ";
+        cout << "Your guesses: ";
         for (int i = 0; i < size; i++)  {
             cout << users_guess.at(i) << " ";
         }
-        cout << "\nc = correct place\nw = number is wrong place\nX = the number doesnt exist\n";
-        cout << "your result is: ";
+        cout << "\nc = number is in correct blank\nw = number is in wrong blank\nX = the number is not in the equation\n";
+        cout << "Your result is: ";
         for (string i : result)
         {
             cout << i << " ";
@@ -70,9 +70,9 @@ int main() {
                 users_guess.at(i) = 0;
             }
             // allow user to retry
-            cout << "try again" << endl;
+            cout << "Try again." << endl;
             for (int i = 0;  i < size; i++) {
-                cout << "number " << i+1 << " : ";
+                cout << "Blank " << i+1 << " : ";
                 cin >> temp;
                 users_guess.at(i) = temp;
             }
@@ -82,5 +82,5 @@ int main() {
 
         }
     }
-    cout << "\nyay" << endl;
+    cout << "\nCongrats! You may use your answer in the passcode." << endl;
 }
