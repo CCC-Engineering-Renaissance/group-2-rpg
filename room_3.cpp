@@ -9,7 +9,7 @@ void puzzle_3_1() {
   cin.get();
   cout << "FF0000";
   cin.get();
-  cout << "For the passcode input the color's spot in the rainbow (e.g. red = 1, violet =7).";
+  cout << "For the passcode input the color's spot in the rainbow (e.g. red = 1, violet = 7).";
   cin.get();
 }
 
