@@ -20,15 +20,15 @@ void door_1 (){
     cout << "If you need to go back and look at the puzzles, enter 0 to cancel.\n";
 int passcode1;
 cout << "Please enter the passcode:\n";
-cin >> passcode_1;
 while(true) {
 	cin >> passcode_1;
 	if (passcode_1 > 9) {
-		cout << "The passcode is a one digit number.\n";
+		cout << "The passcode is a one digit integer.\n";
 		cout << "Please try again.\n";
 		}
 	else if (passcode_1 == 5) {
-		cout << "The room goes dark for a second.\n";
+		cout << "The room goes dark for a second.";
+		cin.get();
 		// switch map from Room 1 to Room 2
         cout << "When the light returns, you find that the decorations in the room have changed, or perhaps you're in a different room with identical architecture.";
 		cin.get();
