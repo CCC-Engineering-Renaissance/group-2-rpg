@@ -38,7 +38,7 @@ void puzzle_3_3() {
   cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
 cin >> choice;
   	if (choice == 1){
-    cout << "You open the box.";
+    cout << "You open the box.\n";
     cin.get();
     cout << "It's a snake! It rolls its eyes at you...";
     cin.get();
@@ -54,5 +54,36 @@ cin >> choice;
     cin.get();
 }}
 
+int passcode_3;
+cout << "Don't forget to enter the leftmost puzzle answer first.";
+cin.get(); 
+cout << "If you need to go back and look at the puzzles, enter 0 to cancel.";
+cin.get();
+cout << "Please enter the passcode: ";
+while(true) {
+    cin >> passcode_2;
+	if (passcode_2 > 999 || passcode_2 < 100) {
+		cout << "The passcode is a three digit integer.\n";
+		cout << "Please try again: ";
+		}
+	else if (passcode_2 == 192) {
+		cout << "The room goes dark for a second.\n";
+		cin.get();
+		// switch map from Room 3 to Room 4
+cout << "Nice work.";
+cin.get(); 
+cout << "You're still trapped though.";
+cin.get(); 
+cout << "Sorry again.";
+cin.get();
+		break;
+		}
+	else if (passcode_2 == 0) {
+		break;
+		}
+	else {
+		cout << "Please try again: ";
+		}
+}}
 int main() {puzzle_3_1();
 puzzle_3_2();}
