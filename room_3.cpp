@@ -54,6 +54,7 @@ cin >> choice;
     cin.get();
 }}
 
+void door_3(){
 int passcode_3;
 cout << "Don't forget to enter the leftmost puzzle answer first.";
 cin.get(); 
