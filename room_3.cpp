@@ -63,7 +63,7 @@ cin.get();
 cout << "Please enter the passcode: ";
 while(true) {
     cin >> passcode_3;
-	if (passcode_3 > 999 || passcode_2 < 100) {
+	if (passcode_3 > 999 || passcode_3 < 100) {
 		cout << "The passcode is a three digit integer.\n";
 		cout << "Please try again: ";
 		}
