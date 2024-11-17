@@ -63,5 +63,15 @@ void puzzle_4_2() {
   cout << "You will recieve more clues after your first guess.";
   number_wordle();
 }
-  
 
+//This is the third puzzle for room 4. It is in reference to 01134 as it appears upside down on a calculator. The answer to this puzzle is 9.
+voice puzzle_4_3() {
+  cout << "There's an inscription on the wall.";
+  cin.get();
+  cout << "All it says is \"hello"\.";
+  cin.get();
+  cout << "The lack of capitalization and punctuation bothers you.";
+  cin.get();
+  cout << "There is no more to this hint.";
+  cin.get();
+}
