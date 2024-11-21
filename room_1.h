@@ -15,7 +15,25 @@ beisdes you robert requiring them
 using namespace std;
 // There is only one puzzle in room one. The player needs to input the date (November 22,2024) as a reduced number to escape to room 2.
 
-
+void tutorial() {
+	cout << "This RPG will use reducing numbers, so let’s get familiar with it.";
+	cin.get();
+	cout << "In order to reduce a number, add the sum of its digits.";
+	cin.get();
+	cout << "If your answer still has more than one digit, then repeat this process until you're left with a single digit."; 
+	cin.get();
+	cout << "Let’s look at an example, your number is 407:";
+	cin.get();
+	cout << "4+0+7=11, 1+1=2, so 407 becomes 2.";
+	cin.get();
+	cout << "Alright, now it’s your turn.";
+	cin.get();
+	cout << "Make your way over to the ! and put in today’s date. Good luck!";
+	cin.get();
+	cout << "P.S. There's no rush, feel free to check out the room first.";
+	cin.get();
+}
+		
 void door_1 (){
     cout << "If you need to go back and look at the puzzles, enter 0 to cancel.\n";
 int passcode1;
@@ -43,3 +61,22 @@ while(true) {
 		}
 }    
 
+void calendar() {
+	cout << "It's a calendar.";
+	cin.get();
+	cout << "The date is November 22, 2024.";
+	cin.get();
+}
+int choice;
+void retutorial() {
+	cout << "Do you need to see the summing digits tutorial again?";
+	cin.get();
+	cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
+	cin >> choice;
+	if (choice == 1){
+	tutorial();
+}
+else if (choice == 0){
+cout << "See ya later!";
+cin.get();
+}}
