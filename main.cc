@@ -38,8 +38,8 @@ room2 =
 "|                                        |\n", // - is at (24 , 1)
 "|          le                            |\n",
 "|        painting                        |\n",
-"|                          O             |\n", //how many people are in this room
-"|                                  !     |\n",
+"|                          O             |\n", //0 is at (28 ,5)
+"|                                  !     |\n", // is at (36, 6)
 "------------------------------------------\n"
 };
 room3 =
