@@ -1,8 +1,11 @@
 //#include "colors.h" // If you want to make your map look pretty and use colors :)
-#include <iostream>
-#include <string>
-#include <vector>
-#include <iomanip>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<iomanip>
+#include<cstdlib>
+#include<ctime>
+//#include<conio.h>
 using namespace std;
 
 
@@ -13,82 +16,158 @@ void thing (){
     cout << "whatever" << endl;
 }
 
-int main(){
-  thing();
-vector<string> room1, room2, room3, room4; 
-// You can use a 2D vector if you'd like, but it's a lot better to emulate a 2D vector with a 1D one.
 
-// for some reasons the rooms wont compile
-// needs looking into
-/*
+void game_map()
+{
+vector<string> room1, room2, room3, room4, room5;
 room1 = {
 
-    "------------------------------------------",
-    "|                                        |",
-    "|                                        |",
-    "|                                        |",
-    "|                                        |",
-    "|         *              2024            |",
-    "|                                  !     |",
-    "------------------------------------------",
+"------------------------------------------\n",
+"|                                        |\n",
+"|                                        |\n",
+"|                                        |\n",
+"|                                        |\n",
+"|         *              2024            |\n",
+"|                                  !     |\n",
+"------------------------------------------\n",
 };
-room2 = {
-
-    "------------------------------------------",
-    "|                                        |",
-    "|                                        |",
-    "|          le                            |",
-    "|        painting                        |",
-    "|                          O             |",
-    "|                                  !     |",
-    "------------------------------------------"};
-room3 = {
-
-    "------------------------------------------",
-    "|                                        |",
-    "|                                        |",
-    "|                                        |",
-    "|         @                              |",
-    "|         |*                             |",
-    "|                                  !     |",
-    "------------------------------------------",
-};
-room4 = {
-
-    "------------------------------------------",
-    "|                                        |",
-    "|                                        |",
-    "|                          =             |",
-    "|                                        |",
-    "|           ~                            |",
-    "|                                  !     |",
-    "------------------------------------------",
-};
-*/
-
-
-
-// This is where all your logic will go
-while (1 > 2)
+room2 =
 {
-  // TODO: Get user input
-
-  // TODO Move character or something cool using the user's input
-
-  // TODO: Output map
+"------------------------------------------\n",
+"|                                        |\n",
+"|                                        |\n",
+"|          le                            |\n",
+"|        painting                        |\n",
+"|                          O             |\n",
+"|                                  !     |\n",
+"------------------------------------------\n"
+};
+room3 =
+{
+"------------------------------------------\n",
+"|                                        |\n",
+"|                                        |\n",
+"|                                        |\n",
+"|         @                              |\n",
+"|         |*                             |\n",
+"|                                  !     |\n",
+"------------------------------------------\n",
+};
+room4 =
+{
+"------------------------------------------\n",
+"|                                        |\n",
+"|                                        |\n",
+"|                          =             |\n",
+"|                                        |\n",
+"|           ~                            |\n",
+"|                                  !     |\n",
+"------------------------------------------\n",
+};
+room5 =
+{
+"     |                                    \n",
+"    -0-                         /          \n",
+"     |          *               o      *     \n",
+"                              /            \n",
+"        *                             *     \n",
+"           |              *                 \n",
+"         --*--            *                    \n",
+"           |                          *     \n",
+};
+for (int i = 0; i < room1.size(); i++)
+{
+cout << room1[i] << "";
 
 }
-//date();
+for (int i = 0; i < room2.size(); i++)
+{
+cout << room2[i] << "";
+}
+for (int i = 0; i < room3.size(); i++)
+{
+cout << room3[i] << "";
+
+}
+for (int i = 0; i < room4.size(); i++)
+{
+cout << room4[i] << "";
+}
+for (int i = 0; i < room5.size(); i++)
+{
+cout << room5[i] << "";
 }
 
-// Room 1 puzzles
+}
+
+void game_player()
+{
+const char the_player = '&';
+}
+
+void player_pos()
+{
+game_map();
+game_player();
+vector<int> player_poss = { 0,0 };
+
+}
 
 
-//
+void player_controls()
+{
+game_map();
+game_player();
+// the player is not in the map yet
+//so basically, we need to put the player in the map, and have him move when they click wasd
+// I think the way that you should go about doing this is to have them move over one coloumn or whatever
+// just like it is done in dad bod.
+char key = cin.get();
+
+while(true)
+{
+if (key == 'w')
+{
+cout << "up\n";
+continue;
+}
+else if (key == 'a')
+{
+cout << "left\n";
+continue;
+}
+else if (key == 's')
+{
+cout << "down\n";
+continue;
+}
+else if (key == 'd')
+{
+cout << "right\n";
+continue;
+}
+else
+{
+cout << "Invalid Input\n";
+continue;
+}
+}
+
+
+
+
+}
+
+
+int main()
+{
+player_controls();
+return 0;
+system("pause");
+}
+
+
 void date() {
-  // mac users use clear and windows uses cls
-
-  // system("cls");
 
   system("clear");
   // working on alligning this
