@@ -35,7 +35,7 @@ room2 =
 {
 "------------------------------------------\n",
 "|                       -                |\n",
-"|                                        |\n", // 
+"|                                        |\n", // - is at (24 , 1)
 "|          le                            |\n",
 "|        painting                        |\n",
 "|                          O             |\n", //how many people are in this room
