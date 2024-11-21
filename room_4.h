@@ -68,9 +68,9 @@ void puzzle_4_2() {
 voice puzzle_4_3() {
   cout << "There's an inscription on the wall.";
   cin.get();
-  cout << "All it says is \"hello"\.";
+  cout << "All it says is \"hEllo"\.";
   cin.get();
-  cout << "The lack of capitalization and punctuation bothers you.";
+  cout << "The odd capitalization bothers you.";
   cin.get();
   cout << "There is no more to this hint.";
   cin.get();
