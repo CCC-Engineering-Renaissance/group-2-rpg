@@ -1,20 +1,23 @@
+#pragma once
 #include <iostream>
 #include <cmath>
 #include <iomanip>
 using namespace std;
-int choice;
+
 // This is the first puzzle in room 3. It requires you to use a hex code. The answer for this puzzle is 1.
 void puzzle_3_1() {
+  int choice;
   cout << "It's a rose! What color is it?";
   cin.get();
   cout << "FF0000";
   cin.get();
-  cout << "For the passcode input the color's spot in the rainbow (e.g. red = 1, violet = 7).";
+  cout << "For the passcode input the color's spot in the rainbow (e.g. red = 1, orange = 2, yellow = 3).";
   cin.get();
 }
 
 // This is the second puzzle in room 3. The number is hidden in the first letter of every line. The answer for this puzzle is 9.
 void puzzle_3_2() {
+// the couts here tell story
   cout << "You press a button and a speaker turns on.";
   cin.get();
   cout << "The voice is distorted.";
@@ -31,6 +34,7 @@ void puzzle_3_2() {
 
 // This is the third puzzle in room 3. It refers to the term "snake eyes" in dice. The answer for this puzzle is 2.
 void puzzle_3_3() {
+  int choice;
   cout << "It's a cardboard box.";
   cin.get();
   cout << "Open it?";
