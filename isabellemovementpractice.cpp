@@ -15,9 +15,9 @@ room1 = {
 "|                                        |\n",
 "|                                        |\n",
 "|                                        |\n",
-"|         #                              |\n", // # is at (11,5)
-"|                        2024            |\n", // 2024 is at (26-29,6)
-"|                                  !     |\n", // ! is at (36,7)
+"|         #                              |\n", // # is at (10,4)
+"|                        2024            |\n", // 2024 is at (25-28,5)
+"|                                  !     |\n", // ! is at (35,6)
 "------------------------------------------\n",
 };
 
@@ -63,12 +63,31 @@ else if(current_column == 41){
     room1[current_row][current_column] = '|';
     current_column = current_column - 1;
 }
+if(!(current_row == 4 && current_column == 10)){
+    room1[4][10] = '#';
+}
+if(!(current_row == 5 && current_column == 25)){
+    room1[5][25] = '2';
+}
+if(!(current_row == 5 && current_column == 27)){
+    room1[5][27] = '2';
+}
+if(!(current_row == 5 && current_column == 26)){
+    room1[5][26] = '0';
+}
+if(!(current_row == 5 && current_column == 28)){
+    room1[5][28] = '4';
+}
+if(!(current_row == 6 && current_column == 35)){
+    room1[6][35] = '!';
+}
 cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 room1[current_row][current_column] ='&';
 for (int i = 0; i < room1.size(); i++)
 {
 cout << room1[i] << "";}
-}}
+}
+}
 
 
 
