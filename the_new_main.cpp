@@ -184,13 +184,15 @@ room2 =
 "|                                        |\n",
 "|                                        |\n", // - is at (23 , 1)
 "|          le                            |\n",
-"|        painting                        |\n",
+"|        painting                        |\n",  // le painting drawn by isabelle 
 "|                          O             |\n", //0 is at (27 ,5)
 "|                                  !     |\n", // ! is at (35, 6)
 "------------------------------------------\n"
 };
+// delcaring posiotn of the !
 current_column = 35;
 current_row = 6;
+// the editied room 2 repints it back out so we dont eat up of the map   
 room2_edited = room2;
 room2_edited[current_row][current_column] ='&';
 for (int i = 0; i < room2_edited.size(); i++)
