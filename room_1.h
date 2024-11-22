@@ -92,3 +92,19 @@ void retutorial() {
 }
 set_raw_mode(true);
 }
+
+void intro() {
+  system("clear");
+  // working on alligning this
+    cout << "Welcome to Terminal Escape! [press enter to cont.]";
+    cin.get();
+    cout << "To move, use WASD.";
+	cin.get();
+	cout << "To interact with objects, press E.";
+    cin.get();
+    cout << "The date is November 22, 2024, the day that the Engineering Renaissance assignment is due.";
+    cin.get();
+    cout << "You wake up in a cold dark room with no doors or windows in sight.";
+    cin.get();
+    cout << "Also you can suddenly fly. I can't explain that one yet.\n";
+}
