@@ -7,6 +7,7 @@ from there
 
 
 */
+#pragma once
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -14,7 +15,7 @@ from there
 #include <string>
 using namespace std;
 
-int main() {
+void number_wordle() {
     //creating the vector for the answer
     vector<int> answer(5);  // = {4, 2, 9, 3 ,11}; old answer format
     // new answer forma
