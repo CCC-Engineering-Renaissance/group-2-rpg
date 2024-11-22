@@ -9,9 +9,6 @@
 using namespace std;
 
 //function prototypes
-vector<string> room1;
-vector<string> room1_edited;
-
 
 // our amazing main
 int main() {
@@ -161,7 +158,7 @@ cout << room1_edited[i] << "";}
 
 }
     
-if(c == 'E'){
+if(c == 'E'){ // this allows the user to enter rooms
     if((current_row == 4 && current_column == 10)){
     retutorial();
 }
