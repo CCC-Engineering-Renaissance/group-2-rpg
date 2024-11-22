@@ -154,6 +154,8 @@ room1_edited = room1;
 
 // this clears the previous movement
 system("clear");
+
+    
 room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
 {
@@ -161,7 +163,7 @@ cout << room1_edited[i] << "";}
 
 }
 
-if(c == 'E'){
+if(c == 'E'){ // this allows user to enter room
     if((current_row == 4 && current_column == 10)){
     retutorial();
 }
@@ -173,6 +175,7 @@ if(c == 'E'){
 }}
 }
 
+    // we now enter a new room, so print out a new room
 vector<string> room2;
 vector<string> room2_edited;
 room2 =
