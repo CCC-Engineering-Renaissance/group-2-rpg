@@ -65,10 +65,10 @@ void puzzle_4_2() {
 }
 
 //This is the third puzzle for room 4. It is in reference to 01134 as it appears upside down on a calculator. The answer to this puzzle is 9.
-voice puzzle_4_3() {
+void puzzle_4_3() {
   cout << "There's an inscription on the wall.";
   cin.get();
-  cout << "All it says is \"hEllo"\.";
+  cout << "All it says is \"hEllo\".";
   cin.get();
   cout << "The odd capitalization bothers you.";
   cin.get();

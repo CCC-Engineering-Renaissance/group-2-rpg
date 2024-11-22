@@ -85,6 +85,4 @@ cin.get();
 	else {
 		cout << "Please try again: ";
 		}
-}}
-int main() {puzzle_3_1();
-puzzle_3_2();}
+}};

@@ -103,12 +103,4 @@ cin.get();
 	else {
 		cout << "Please try again: ";
 		}
-}}
-
-int main()
-{
-    puzzle_2_1();
-    puzzle_2_2();
-    puzzle_2_3();
-    door_2();
-}
+}};
