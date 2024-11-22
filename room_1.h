@@ -16,6 +16,7 @@ using namespace std;
 // There is only one puzzle in room one. The player needs to input the date (November 22,2024) as a reduced number to escape to room 2.
 
 void tutorial() {
+	// this will cout the basics of how to play the game 
 	cout << "This RPG will use reducing numbers, so let’s get familiar with it.";
 	cin.get();
 	cout << "In order to reduce a number, add the sum of its digits.";
@@ -35,6 +36,8 @@ void tutorial() {
 }
 		
 void door_1 (){
+	// door 1, here we will go where basically just do stuff ya 
+	// it pretty much checks if answer is 5 or not and tells users if its # is to large 
     cout << "If you need to go back and look at the puzzles, enter 0 to cancel.\n";
 int passcode1;
 cout << "Please enter the passcode:\n";
