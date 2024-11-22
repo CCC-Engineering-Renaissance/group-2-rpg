@@ -20,7 +20,11 @@ void thing (){
 
 void game_map()
 {
-vector<string> room1, room2, room3, room4, room5;
+vector<string> room1;
+vector<string> room2;
+vector<string> room3;
+vector<string> room4;
+vector<string> room5;
 room1 = {
 
 "------------------------------------------\n",
@@ -81,11 +85,11 @@ for (int i = 0; i < room1.size(); i++)
 cout << room1[i] << "";
 
 }
-for (int i = 0; i < room2.size(); i++)
-{
-cout << room2[i] << "";
-}
-for (int i = 0; i < room3.size(); i++)
+//for (int i = 0; i < room2.size(); i++)
+//{
+//cout << room2[i] << "";
+//}
+//for (int i = 0; i < room3.size(); i++)
 {
 cout << room3[i] << "";
 
@@ -110,8 +114,8 @@ void player_pos()
 {
 game_map();
 game_player();
-vector<int> player_poss = { 0,0 };
-
+int current_row = 7;
+int current_column = 3;
 }
 
 

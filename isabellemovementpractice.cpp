@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -27,40 +27,48 @@ room1[current_row][current_column] ='&';
 for (int i = 0; i < room1.size(); i++)
 {
 cout << room1[i] << "";}
-char c = toupper(quick_read());
+while (true){
+char player_movement;
+cin >> player_movement;
+char c = toupper(player_movement);
 if (c == 'W') {
 room1[current_row][current_column] =' ';
 current_row = current_row - 1;
-room1[current_row][current_column] ='&';
-for (int i = 0; i < room1.size(); i++)
-{
-cout << room1[i] << "";}
 }
 else if (c == 'A') {
 room1[current_row][current_column] =' ';
 current_column = current_column - 1;
-room1[current_row][current_column] ='&';
-for (int i = 0; i < room1.size(); i++)
-{
-cout << room1[i] << "";}
 }
 else if (c == 'S') {
 room1[current_row][current_column] =' ';
 current_row = current_row + 1;
-room1[current_row][current_column] ='&';
-for (int i = 0; i < room1.size(); i++)
-{
-cout << room1[i] << "";}
 }
 else if (c == 'D') {
 room1[current_row][current_column] =' ';
 current_column = current_column + 1;
+}
+if(current_row == 0){
+    room1[current_row][current_column] = '-';
+    current_row = current_row + 1;
+}
+else if(current_row == 7){
+    room1[current_row][current_column] = '-';
+    current_row = current_row - 1;
+}
+else if(current_column == 0){
+    room1[current_row][current_column] = '|';
+    current_column = current_column + 1;
+}
+else if(current_column == 41){
+    room1[current_row][current_column] = '|';
+    current_column = current_column - 1;
+}
+cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 room1[current_row][current_column] ='&';
 for (int i = 0; i < room1.size(); i++)
 {
 cout << room1[i] << "";}
-}
-}
+}}
 
 
 
