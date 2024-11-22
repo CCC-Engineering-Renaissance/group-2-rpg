@@ -273,7 +273,112 @@ if(c == 'E'){
     if (door_2()) break;
 }}
 
+}
+vector<string> room3;
+vector<string> room3_edited;
+room3 =
+{
+"------------------------------------------\n",
+"|                .                       |\n", // . is at (18,2)
+"|                                        |\n",
+"|                         []             |\n", // ■ is at (27,4)
+"|         @                              |\n", // @ is at (11,5)
+"|         |*                             |\n", // | is at (11,6) and * is at (12,6)
+"|                                  !     |\n", // ! is at (36,7)
+"------------------------------------------\n",
+};
+current_column = 35;
+current_row = 6;
+room3_edited = room3;
+room3_edited[current_row][current_column] ='&';
+for (int i = 0; i < room3_edited.size(); i++)
+{
+cout << room3_edited[i] << "";}
+set_raw_mode(true);
+while(true){
+    char player_movement;
+player_movement = quick_read();
+char c = toupper(player_movement);
+if (c == 'W') {
+current_row = current_row - 1;
+    if(current_row == 0){
+    room3_edited[current_row][current_column] = '-';
+    current_row = current_row + 1;
+}
+
+room3_edited = room3;
+system("clear");
+room3_edited[current_row][current_column] ='&';
+for (int i = 0; i < room3_edited.size(); i++)
+{
+cout << room3_edited[i] << "";}
+}
+else if (c == 'A') {
+    current_column = current_column -1;
+    if(current_column == 0){
+    room3_edited[current_row][current_column] = '|';
+    current_column = current_column + 1;
+}
+room3_edited = room3;
+system("clear");
+room3_edited[current_row][current_column] ='&';
+for (int i = 0; i < room3_edited.size(); i++)
+{
+cout << room3_edited[i] << "";}
+
+}
+else if (c == 'S') {
+current_row = current_row + 1;
+    if(current_row == 7){
+    room3_edited[current_row][current_column] = '-';
+    current_row = current_row - 1;
+}
+room3_edited = room3;
+system("clear");
+room3_edited[current_row][current_column] ='&';
+for (int i = 0; i < room3_edited.size(); i++)
+{
+cout << room3_edited[i] << "";}
+
+}
+else if (c == 'D') {
+current_column = current_column + 1;
+    if(current_column == 41){
+    room3_edited[current_row][current_column] = '|';
+    current_column = current_column - 1;
+}
+room3_edited = room3;
+system("clear");
+room3_edited[current_row][current_column] ='&';
+for (int i = 0; i < room3_edited.size(); i++)
+{
+cout << room3_edited[i] << "";}
+
+}
+
+if(c == 'E'){
+    if(current_row == 4 && current_column == 10){
+        puzzle_3_1();
+}
+    else if(current_row == 5 && (current_column == 10 || current_column == 11)){
+        puzzle_3_1();
+    }
+    else if(current_row == 1 && current_column == 17) {
+    puzzle_3_2();
+    }
+    else if(current_row == 3 && (current_column == 26 || current_column == 27)){
+    puzzle_3_3();
+    }
+    else if((current_row == 6 && current_column == 35)){
+    if (door_3()) break;
 }}
+
+}}
+
+
+
+
+
 
 
 
