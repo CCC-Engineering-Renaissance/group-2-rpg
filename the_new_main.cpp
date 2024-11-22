@@ -356,7 +356,7 @@ cout << room3_edited[i] << "";}
 
 }
 
-if(c == 'E'){
+if(c == 'E'){ // this allows users to enter room
     if(current_row == 4 && current_column == 10){
         puzzle_3_1();
 }
