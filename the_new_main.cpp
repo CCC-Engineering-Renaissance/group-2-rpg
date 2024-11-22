@@ -183,6 +183,7 @@ room2 =
 "|                                  !     |\n", // ! is at (35, 6)
 "------------------------------------------\n"
 };
+// declaring position of the !
 current_column = 35;
 current_row = 6;
 room2_edited = room2;
@@ -195,7 +196,7 @@ while(true){
     char player_movement;
 player_movement = quick_read();
 char c = toupper(player_movement);
-if (c == 'W') {
+if (c == 'W') { // key for users to move up
 current_row = current_row - 1;
     if(current_row == 0){
     room2_edited[current_row][current_column] = '-';
@@ -204,19 +205,24 @@ current_row = current_row - 1;
 }
 
 room2_edited = room2;
+
+// clearing the old map
 system("clear");
+    
 room2_edited[current_row][current_column] ='&';
 for (int i = 0; i < room2_edited.size(); i++)
 {
 cout << room2_edited[i] << "";}
 }
-else if (c == 'A') {
+else if (c == 'A') { // this allows the user to move left
     current_column = current_column -1;
     if(current_column == 0){
     room2_edited[current_row][current_column] = '|';
     current_column = current_column + 1;
 }
 room2_edited = room2;
+
+// clears old maps after input for movement
 system("clear");
 room2_edited[current_row][current_column] ='&';
 for (int i = 0; i < room2_edited.size(); i++)
@@ -224,7 +230,7 @@ for (int i = 0; i < room2_edited.size(); i++)
 cout << room2_edited[i] << "";}
 
 }
-else if (c == 'S') {
+else if (c == 'S') { // allows user to move down
 current_row = current_row + 1;
     if(current_row == 7){
     room2_edited[current_row][current_column] = '-';
@@ -238,7 +244,7 @@ for (int i = 0; i < room2_edited.size(); i++)
 cout << room2_edited[i] << "";}
 
 }
-else if (c == 'D') {
+else if (c == 'D') { // allows user to move to the right
 current_column = current_column + 1;
     if(current_column == 41){
     room2_edited[current_row][current_column] = '|';
