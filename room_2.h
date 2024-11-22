@@ -14,6 +14,7 @@ cin.get();
 // This is the second puzzle of room 2. The correct answer is the number of people in Engineering Renaissance. If the player doesn't know this
 // number, they can still obtain the answer by adding their guess and the number of people missing. This answer for this puzzle is 7.
 void puzzle_2_2() {
+// declaration of varaibles 
 int people;
 int peoplemissing;
 cout << "It's an oval shaped mirror.";
@@ -31,8 +32,11 @@ while(true) {
 		}
 	else if (people == 34) {
   cout << "Excellent work! Try not to forget that number. Come see yourself again if you do.\n";
+/* the break the break is within the people == 34 so that the cin
+at the top forces the user to keep trying untill they get the answer */
   break;
   }
+// if people is to large
   else if (people > 34) {
   cout << "Either you're very popular, or you're lying. Either way, just pick a lower number.\n";
   }
@@ -58,6 +62,7 @@ cout << "\"I aM DeCLan.\" Hmm… Declan, you wonder if that's a Roman name.";
 cin.get();
   }
 void door_2(){
+// declaring passcode 2
 int passcode_2;
 cout << "Hopefully you already caught on, but there were multiple puzzles in this room.";
 cin.get(); 
