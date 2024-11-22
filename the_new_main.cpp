@@ -28,7 +28,7 @@ room1 = {
 "|                                  !     |\n", // ! is at (35,6)
 "------------------------------------------\n",
 };
-
+intro();
 int current_column = 2;
 int current_row = 6;
 room1_edited = room1;
