@@ -57,10 +57,10 @@ room4 =
 {
 "------------------------------------------\n",
 "|                                        |\n",
+"|     ~                                  |\n",
+"|                              =         |\n",
+"|                   ☐                    |\n",
 "|                                        |\n",
-"|                          =             |\n",
-"|                                        |\n",
-"|           ~                            |\n",
 "|                                  !     |\n",
 "------------------------------------------\n",
 };
@@ -171,8 +171,14 @@ void date() {
 
   system("clear");
   // working on alligning this
-  cout << setw(20)<< "The date is November 9, 2024. The day after the Engineering Renaissance assignment is due." << endl << right;
-  cout << right << setw(50) << " You wake up in a cold dark room with no doors or windows in sight." << endl;
-  cout << setw(75) << right << "Also you can suddenly fly. I can't explain that one yet.";
+    cout << "Welcome to Terminal Escape! [press enter to cont.]";
+    cin.get();
+    cout << "To move, use WASD.";
+    cin.get();
+    cout << "The date is November 9, 2024, the day after the Engineering Renaissance assignment is due.";
+    cin.get();
+    cout << "You wake up in a cold dark room with no doors or windows in sight.";
+    cin.get();
+    cout << "Also you can suddenly fly. I can't explain that one yet.";
 }
 
