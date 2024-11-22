@@ -10,13 +10,13 @@
 using namespace std;
 
 //function prototypes
-vector<string> room1;
-vector<string> room1_edited;
+
 
 
 // our amazing main
 int main() {
-
+vector<string> room1;
+vector<string> room1_edited;
 vector<string> room1;
 vector<string> room1_edited;
 
