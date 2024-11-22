@@ -12,6 +12,7 @@ beisdes you robert requiring them
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include"colors.h"
 using namespace std;
 // There is only one puzzle in room one. The player needs to input the date (November 22,2024) as a reduced number to escape to room 2.
 
@@ -39,9 +40,11 @@ void door_1 (){
 	// door 1, here we will go where basically just do stuff ya 
 	// it pretty much checks if answer is 5 or not and tells users if its # is to large 
     cout << "If you need to go back and look at the puzzles, enter 0 to cancel.\n";
+int door_loop = 1;
 int passcode_1;
 cout << "Please enter the passcode:\n";
-while(true) {
+while(door_loop == 1) {
+	set_raw_mode(false);
 	cin >> passcode_1;
 	if (passcode_1 > 9) {
 		cout << "The passcode is a one digit integer.\n";
@@ -63,25 +66,29 @@ while(true) {
 	else {
 		cout << "Please try again.\n";
 		}
-}}    
+} set_raw_mode(true);
+}    
 
 void calendar() {
-	cout << "It's a calendar.";
-	cin.get();
+	set_raw_mode(false);
+	cout << "It's a calendar.\n";
 	cout << "The date is November 22, 2024.";
 	cin.get();
+	set_raw_mode(true);
 }
 
 void retutorial() {
+	set_raw_mode(false);
 	int choice_tut;
-	cout << "Do you need to see the summing digits tutorial again?";
-	cin.get();
+	cout << "Do you need to see the summing digits tutorial again?\n";
 	cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
 	cin >> choice_tut;
 	if (choice_tut == 1){
 	tutorial();
 }
-else if (choice_tut == 0){
-cout << "See ya later!";
-cin.get();
-}}
+	else if (choice_tut == 0){
+	cout << "See ya later!";
+	cin.get();
+}
+set_raw_mode(true);
+}
