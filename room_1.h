@@ -36,14 +36,13 @@ void tutorial() {
 	cin.get();
 }
 		
-void door_1 (){
+bool door_1 (){
 	// door 1, here we will go where basically just do stuff ya 
 	// it pretty much checks if answer is 5 or not and tells users if its # is to large 
     cout << "If you need to go back and look at the puzzles, enter 0 to cancel.\n";
-int door_loop = 1;
 int passcode_1;
 cout << "Please enter the passcode:\n";
-while(door_loop == 1) {
+while(true) {
 	set_raw_mode(false);
 	cin >> passcode_1;
 	if (passcode_1 > 9) {
@@ -58,7 +57,7 @@ while(door_loop == 1) {
 		cin.get();
 		cout << "Either way, it doesn't matter. You're still trapped.\n";
 		cin.get();
-		break;
+		return 1;
 		}
 	else if (passcode_1 == 0) {
 		break;
@@ -67,6 +66,7 @@ while(door_loop == 1) {
 		cout << "Please try again.\n";
 		}
 } set_raw_mode(true);
+return 0;
 }    
 
 void calendar() {
