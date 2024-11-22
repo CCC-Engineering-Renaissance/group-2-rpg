@@ -1,4 +1,12 @@
+/*
 
+
+
+we will copy and paste into main once we need to call this and make a function 
+from there
+
+
+*/
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -6,9 +14,15 @@
 #include <string>
 using namespace std;
 
-void number_wordle() {
+int main() {
     //creating the vector for the answer
-    vector<int> answer = {4, 2, 9, 3 ,11};
+    vector<int> answer(5);  // = {4, 2, 9, 3 ,11}; old answer format
+    // new answer forma
+    answer.at(0) = 4;
+    answer.at(1) = 2;
+    answer.at(2) = 9;
+    answer.at(3) = 3;
+    answer.at(4) = 11;
     
     //getting size of vector to use in for loops
     //so we can chnage amount of numbers answe has later
