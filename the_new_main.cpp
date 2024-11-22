@@ -202,43 +202,19 @@ current_row = current_row - 1;
     current_row = current_row + 1;
     puzzle_2_3();
 }
-else if(current_row == 7){
-    room2_edited[current_row][current_column] = '-';
-    current_row = current_row - 1;
-}
-else if(current_column == 0){
-    room2_edited[current_row][current_column] = '|';
-    current_column = current_column + 1;
-}
-else if(current_column == 41){
-    room2_edited[current_row][current_column] = '|';
-    current_column = current_column - 1;
-}
+
 room2_edited = room2;
 system("clear");
 room2_edited[current_row][current_column] ='&';
 for (int i = 0; i < room2_edited.size(); i++)
 {
 cout << room2_edited[i] << "";}
-
 }
 else if (c == 'A') {
-current_column = current_column - 1;
-    if(current_row == 0){
-    room2_edited[current_row][current_column] = '-';
-    current_row = current_row + 1;
-}
-else if(current_row == 7){
-    room2_edited[current_row][current_column] = '-';
-    current_row = current_row - 1;
-}
-else if(current_column == 0){
+    current_column = current_column -1;
+    if(current_column == 0){
     room2_edited[current_row][current_column] = '|';
     current_column = current_column + 1;
-}
-else if(current_column == 41){
-    room2_edited[current_row][current_column] = '|';
-    current_column = current_column - 1;
 }
 room2_edited = room2;
 system("clear");
@@ -250,21 +226,9 @@ cout << room2_edited[i] << "";}
 }
 else if (c == 'S') {
 current_row = current_row + 1;
-    if(current_row == 0){
-    room2_edited[current_row][current_column] = '-';
-    current_row = current_row + 1;
-}
-else if(current_row == 7){
+    if(current_row == 7){
     room2_edited[current_row][current_column] = '-';
     current_row = current_row - 1;
-}
-else if(current_column == 0){
-    room2_edited[current_row][current_column] = '|';
-    current_column = current_column + 1;
-}
-else if(current_column == 41){
-    room2_edited[current_row][current_column] = '|';
-    current_column = current_column - 1;
 }
 room2_edited = room2;
 system("clear");
@@ -276,19 +240,7 @@ cout << room2_edited[i] << "";}
 }
 else if (c == 'D') {
 current_column = current_column + 1;
-    if(current_row == 0){
-    room2_edited[current_row][current_column] = '-';
-    current_row = current_row + 1;
-}
-else if(current_row == 7){
-    room2_edited[current_row][current_column] = '-';
-    current_row = current_row - 1;
-}
-else if(current_column == 0){
-    room2_edited[current_row][current_column] = '|';
-    current_column = current_column + 1;
-}
-else if(current_column == 41){
+    if(current_column == 41){
     room2_edited[current_row][current_column] = '|';
     current_column = current_column - 1;
 }
@@ -315,8 +267,10 @@ if(c == 'E'){
     if (door_2()) break;
 }}
 
-}
-}
+}}
+
+
+
 
 
 
