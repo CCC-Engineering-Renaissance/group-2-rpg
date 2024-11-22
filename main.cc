@@ -5,6 +5,7 @@
 #include<iomanip>
 #include<cstdlib>
 #include<ctime>
+#include"colors.h"
 //#include<conio.h>
 using namespace std;
 
@@ -122,33 +123,26 @@ game_player();
 //so basically, we need to put the player in the map, and have him move when they click wasd
 // I think the way that you should go about doing this is to have them move over one coloumn or whatever
 // just like it is done in dad bod.
-char key = cin.get();
+set_raw_mode(true);
 
 while(true)
 {
-if (key == 'w')
-{
+  int c = toupper(quick_read());
+if (c == 'W') {
 cout << "up\n";
 continue;
+
 }
-else if (key == 'a')
-{
+else if (c == 'A') {
 cout << "left\n";
 continue;
 }
-else if (key == 's')
-{
+else if (c == 'S') {
 cout << "down\n";
 continue;
 }
-else if (key == 'd')
-{
+else if (c == 'D') {
 cout << "right\n";
-continue;
-}
-else
-{
-cout << "Invalid Input\n";
 continue;
 }
 }
@@ -182,3 +176,4 @@ void date() {
     cout << "Also you can suddenly fly. I can't explain that one yet.";
 }
 
+// g++ --std=c++2a main.cc
