@@ -7,20 +7,11 @@
 #include <ctime>
 #include"colors.h"
 #include"room_1.h"
+#include"room_2.h"
 using namespace std;
-
-//function prototypes
-
-
-
-// our amazing main
 int main() {
 vector<string> room1;
 vector<string> room1_edited;
-vector<string> room1;
-vector<string> room1_edited;
-
-// the design of room 1
 room1 = {
 
 "------------------------------------------\n",
@@ -39,36 +30,19 @@ room1_edited = room1;
 room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
 {
-cout << room1_edited[i] << "";}
-// raw mode doesnt make us not need to use enter key after input
+cout << room1_edited[i] << "";} 
 set_raw_mode(true);
-while (true) {
+while (true){
 char player_movement;
-// quick read is our cin but we dont need enter
 player_movement = quick_read();
-
-//declaring the movement key
 char c = toupper(player_movement);
-if (c == 'W') {  // w moves the charater up
+if (c == 'W') {
 current_row = current_row - 1;
     if(current_row == 0){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row + 1; // this stop the users from leaving the map
-}
-else if(current_row == 7){
-    room1_edited[current_row][current_column] = '-';
-    current_row = current_row - 1;  // allows user to move up
-}
-else if(current_column == 0){
-    room1_edited[current_row][current_column] = '|';
-    current_column = current_column + 1;    // this stop the user from leavig the map
-}
-else if(current_column == 41){ // column 41 is the bottom of map
-    room1_edited[current_row][current_column] = '|';
-    current_column = current_column - 1; // allows user to move up
+    current_row = current_row + 1;
 }
 room1_edited = room1;
-// clears the room
 system("clear");
 room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
@@ -76,26 +50,25 @@ for (int i = 0; i < room1_edited.size(); i++)
 cout << room1_edited[i] << "";}
 
 }
-else if (c == 'A') { // moves charater to the left
+else if (c == 'A') {
 current_column = current_column - 1;
     if(current_row == 0){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row + 1; // stops user from leaving the map
+    current_row = current_row + 1;
 }
 else if(current_row == 7){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row - 1; // allowws user to move left
+    current_row = current_row - 1;
 }
 else if(current_column == 0){
     room1_edited[current_row][current_column] = '|';
-    current_column = current_column + 1; // stops user from moving out of map
+    current_column = current_column + 1;
 }
 else if(current_column == 41){
     room1_edited[current_row][current_column] = '|';
-    current_column = current_column - 1; // allows user to move left
+    current_column = current_column - 1;
 }
 room1_edited = room1;
-//clearing old map
 system("clear");
 room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
@@ -103,59 +76,52 @@ for (int i = 0; i < room1_edited.size(); i++)
 cout << room1_edited[i] << "";}
 
 }
-else if (c == 'S') { // for user to move down
+else if (c == 'S') {
 current_row = current_row + 1;
     if(current_row == 0){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row + 1; // allows user to move down
-    }
+    current_row = current_row + 1;
+}
 else if(current_row == 7){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row - 1; // stops user from moving down
+    current_row = current_row - 1;
 }
 else if(current_column == 0){
     room1_edited[current_row][current_column] = '|';
-    current_column = current_column + 1; // allows user to move down
+    current_column = current_column + 1;
 }
 else if(current_column == 41){
     room1_edited[current_row][current_column] = '|';
-    current_column = current_column - 1; // stop user from leaving the map
+    current_column = current_column - 1;
 }
 room1_edited = room1;
-
-// clears old maps
 system("clear");
-
 room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
 {
 cout << room1_edited[i] << "";}
 
 }
-else if (c == 'D') { // this allows the user to move down
+else if (c == 'D') {
 current_column = current_column + 1;
     if(current_row == 0){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row + 1; // thisb allows the user to move right
+    current_row = current_row + 1;
 }
 else if(current_row == 7){
     room1_edited[current_row][current_column] = '-';
-    current_row = current_row - 1; // this stop the user from moving to the right
+    current_row = current_row - 1;
 }
 else if(current_column == 0){
     room1_edited[current_row][current_column] = '|';
-    current_column = current_column + 1; // this allows the user to move the right
+    current_column = current_column + 1;
 }
 else if(current_column == 41){
     room1_edited[current_row][current_column] = '|';
-    current_column = current_column - 1; // this stops the user from moving to the right
+    current_column = current_column - 1;
 }
 room1_edited = room1;
-
-// this clears the previous movement
 system("clear");
-
-    
 room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
 {
@@ -163,7 +129,7 @@ cout << room1_edited[i] << "";}
 
 }
 
-if(c == 'E'){ // this allows user to enter room
+if(c == 'E'){
     if((current_row == 4 && current_column == 10)){
     retutorial();
 }
@@ -175,7 +141,6 @@ if(c == 'E'){ // this allows user to enter room
 }}
 }
 
-    // we now enter a new room, so print out a new room
 vector<string> room2;
 vector<string> room2_edited;
 room2 =
@@ -184,15 +149,13 @@ room2 =
 "|                                        |\n",
 "|                                        |\n", // - is at (23 , 1)
 "|          le                            |\n",
-"|        painting                        |\n",  // le painting drawn by isabelle 
+"|        painting                        |\n",
 "|                          O             |\n", //0 is at (27 ,5)
 "|                                  !     |\n", // ! is at (35, 6)
 "------------------------------------------\n"
 };
-// delcaring posiotn of the !
 current_column = 35;
 current_row = 6;
-// the editied room 2 repints it back out so we dont eat up of the map   
 room2_edited = room2;
 room2_edited[current_row][current_column] ='&';
 for (int i = 0; i < room2_edited.size(); i++)
