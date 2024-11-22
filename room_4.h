@@ -1,13 +1,16 @@
+#pragma once
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-#include <number_wordle.h>
+#include "number_wordle.h"
 using namespace std;
 // This is a distraction. There is no answer to this puzzle.
-int choice;
+//declaring vaarible
+
 void redherring() {
+int choice;
 cout << "You pick up a book with an image of a computer on the cover. Flip to the first page?\n";
-cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
+cout << "Please enter 1 for yes or 0 for no.\nYou will be able to make this decision again.\n";
 cin >> choice;
 if (choice == 1) {
 cout << "You flip to the first page. It says:";
@@ -18,6 +21,8 @@ cout << "Flip to the second page?\n";
 cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
 cin >> choice;
   	if (choice == 1){
+    // couts are in binaryh code
+    
     cout << "You flip to the second page. It says:";
     cin.get();
     cout << "68 105 100 32 121 111 117 32 114 101 97 108 108 121 32 106 117 115 116 32 102 97 108 108";
@@ -31,13 +36,17 @@ cin >> choice;
     cout << "You put down the book. How incurious!";
     cin.get();
 }}
-else if(choice == 0) {
-cout << "You put down the book. How incurious!";
-cin.get();
-}}
+    else if(choice == 0) {
+    cout << "You put down the book. How incurious!";
+    cin.get();
+}
+}
 
-// This is the first puzzle for room 4. It uses a Caesar cipher with a shift of -1. The answer to this puzzle is 2.
+// This is the first puzzle for room 4. It uses a Caesar cipher with a shift of -1. 
+// The answer to this puzzle is 2.
 void puzzle_4_1() {
+  // users choice
+  int choice = 0;
   cout << "You pick up a note that says \"dhfgs gtmcqdc mhmdsx sgqdd\". Flip it over for a hint?\n";
   cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
   cin >> choice;
@@ -61,10 +70,12 @@ void puzzle_4_2() {
   cout << "All numbers are single digit except for the answer.";
   cin.get();
   cout << "You will recieve more clues after your first guess.";
+  //number wordle comes from a header file
   number_wordle();
 }
 
-//This is the third puzzle for room 4. It is in reference to 01134 as it appears upside down on a calculator. The answer to this puzzle is 9.
+//This is the third puzzle for room 4. It is in reference to 01134 as it appears upside down on a calculator.
+//The answer to this puzzle is 9.
 void puzzle_4_3() {
   cout << "There's an inscription on the wall.";
   cin.get();
