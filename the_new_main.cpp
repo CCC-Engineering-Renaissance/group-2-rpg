@@ -10,6 +10,7 @@
 #include"room_3.h"
 #include"room_4.h"
 #include"number_wordle.h"
+#include"room_ending.h"
 using namespace std;
 
 //function prototypes
@@ -478,7 +479,97 @@ if(c == 'E'){
 }}
 
 }
+vector<string> room5;
+vector<string> room5_edited;
+room5 =
+{
+"------------------------------------------\n",
+"|        *                 &          *  |\n",
+"|                     *       /          |\n",
+"| e          |                *          |\n", // e is at (3,4)
+"| x         -*-              /           |\n", // x is at (3,5)
+"| i          |     *                     |\n", // i is at (3,6)
+"| t                                      |\n", // t is at (3,7)
+"------------------------------------------\n",
+};
+current_column = 35;
+current_row = 6;
+room5_edited = room5;
+room5_edited[current_row][current_column] ='&';
+for (int i = 0; i < room5_edited.size(); i++)
+{
+cout << room5_edited[i] << "";}
+cutscene_1();
+set_raw_mode(true);
+while(true){
+    char player_movement;
+player_movement = quick_read();
+char c = toupper(player_movement);
+if (c == 'W') {
+current_row = current_row - 1;
+    if(current_row == 0){
+    room5_edited[current_row][current_column] = '-';
+    current_row = current_row + 1;
+}
 
+room5_edited = room5;
+system("clear");
+room5_edited[current_row][current_column] ='&';
+for (int i = 0; i < room5_edited.size(); i++)
+{
+cout << room5_edited[i] << "";}
+}
+else if (c == 'A') {
+    current_column = current_column -1;
+    if(current_column == 0){
+    room5_edited[current_row][current_column] = '|';
+    current_column = current_column + 1;
+}
+room5_edited = room5;
+system("clear");
+room5_edited[current_row][current_column] ='&';
+for (int i = 0; i < room5_edited.size(); i++)
+{
+cout << room5_edited[i] << "";}
+
+}
+else if (c == 'S') {
+current_row = current_row + 1;
+    if(current_row == 7){
+    room5_edited[current_row][current_column] = '-';
+    current_row = current_row - 1;
+}
+room5_edited = room5;
+system("clear");
+room5_edited[current_row][current_column] ='&';
+for (int i = 0; i < room5_edited.size(); i++)
+{
+cout << room5_edited[i] << "";}
+
+}
+else if (c == 'D') {
+current_column = current_column + 1;
+    if(current_column == 41){
+    room5_edited[current_row][current_column] = '|';
+    current_column = current_column - 1;
+}
+room5_edited = room5;
+system("clear");
+room5_edited[current_row][current_column] ='&';
+for (int i = 0; i < room5_edited.size(); i++)
+{
+cout << room5_edited[i] << "";}
+
+}
+
+if(c == 'E'){
+    if(current_column == 2 && (current_row == 3 || current_row == 4 || current_row == 5 || current_row == 6)){
+        door_exit();
+        break;
+}
+}}
+set_raw_mode(false);
+cutscene_ending();
 }
 
 
