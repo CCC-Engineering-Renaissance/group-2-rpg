@@ -35,6 +35,7 @@ room1_edited[current_row][current_column] ='&';
 for (int i = 0; i < room1_edited.size(); i++)
 {
 cout << room1_edited[i] << "";} 
+tutorial();
 set_raw_mode(true);
 while (true){
 char player_movement;
