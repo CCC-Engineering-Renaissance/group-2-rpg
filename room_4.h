@@ -8,6 +8,7 @@
 using namespace std;
 // This is a distraction. There is no answer to this puzzle.
 void redherring() {
+  set_raw_mode(false);
   int choice_4;
 cout << "You pick up a book with an image of a computer on the cover. Flip to the first page?\n";
 cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
@@ -37,10 +38,12 @@ cin >> choice_4;
 else if(choice_4 == 0) {
 cout << "You put down the book. How incurious!";
 cin.get();
-}}
+} set_raw_mode(true);
+}
 
 // This is the first puzzle for room 4. It uses a Caesar cipher with a shift of -1. The answer to this puzzle is 2.
 void puzzle_4_1() {
+  set_raw_mode(false);
   int choice_4_2;
   cout << "You pick up a note that says \"dhfgs gtmcqdc mhmdsx sgqdd\". Flip it over for a hint?\n";
   cout << "Please enter 1 for yes or 0 for no. You will be able to make this decision again.\n";
@@ -52,10 +55,12 @@ cin.get();
 else if (choice_4_2 == 0){
 cout << "You put down the note, but it will always be there waiting in case you change your mind.";
 cin.get();
-}}
+} set_raw_mode(true);
+}
 
 //This is the second puzzle for room 4. It is number wordle. The answer for this puzzle is 2.
 void puzzle_4_2() {
+  set_raw_mode(false);
   cout << "There is a keypad on the wall.";
   cin.get();
   cout << "It wants you to enter the numbers that will make this equation true:";
@@ -66,10 +71,12 @@ void puzzle_4_2() {
   cin.get();
   cout << "You will recieve more clues after your first guess.";
   number_wordle();
+  set_raw_mode(true);
 }
 
 //This is the third puzzle for room 4. It is in reference to 01134 as it appears upside down on a calculator. The answer to this puzzle is 9.
 void puzzle_4_3() {
+  set_raw_mode(false);
   cout << "There's an inscription on the wall.";
   cin.get();
   cout << "All it says is \"hEllo\".";
@@ -78,6 +85,7 @@ void puzzle_4_3() {
   cin.get();
   cout << "There is no more to this hint.";
   cin.get();
+  set_raw_mode(true);
 }
 
 bool door_4(){
