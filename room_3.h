@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -85,9 +84,10 @@ cin.get();
 		return 1;
 		}
 	else if (passcode_3 == 0) {
+    set_raw_mode(true);
 		return 0;
 		}
-    if (passcode_3 > 999 || passcode_3 < 100) {
+   else if (passcode_3 > 999 || passcode_3 < 100) {
 		cout << "The passcode is a three digit integer.\n";
 		cout << "Please try again: ";
 		}
