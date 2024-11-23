@@ -87,10 +87,9 @@ cin.get();
 cout << "Please enter the passcode: ";
 while(true) {
     cin >> passcode_2;
-	eif (passcode_2 == 574) {
+	if (passcode_2 == 574) {
 		cout << "The room goes dark for a second.\n";
 		cin.get();
-	
 		// switch map from Room 2 to Room 3
 cout << "Well uh, you probably know the drill by now.";
 cin.get(); 
@@ -101,9 +100,9 @@ cin.get();
 		return 1;
 		}
 	else if (passcode_2 == 0) {
-		break;
+		return 0;
 		}
-		else if (passcode_2 > 999 || passcode_2 < 100) {
+	else if (passcode_2 > 999 || passcode_2 < 100) {
 		cout << "The passcode is a three digit integer.\n";
 		cout << "Please try again: ";
 		}
