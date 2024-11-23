@@ -2,10 +2,12 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include"colors.h"
 using namespace std;
 
 // This is a dialogue that will play once you enter the final room.
 void cutscene_1() {
+  set_raw_mode(false);
   cout << "It's a different room.";
   cin.get();
   cout << "You know this because it's the first time you've encountered a window here.";
@@ -22,11 +24,14 @@ void cutscene_1() {
   cin.get();
   cout << "RUN!";
   cin.get();
+  set_raw_mode(true);
 }
 
-int choice;
+
 // This is the final input the player will give. Their choice does not matter.
 void door_exit() {
+  int choice_exit;
+  set_raw_mode(false);
   cout << "It's the exit. It leads straight out into space.";
   cin.get();
   cout << "It's unlocked.";
@@ -36,14 +41,14 @@ void door_exit() {
   cout << "Open the hatch?";
   cin.get();
   cout << "Please enter 1 for yes or 0 for no. You will not be able to make this decision again.\n";
-  cin >> choice;
-if (choice == 1){}
+  cin >> choice_exit;
+if (choice_exit == 1){}
 else {
   cout << "...";
   cin.get();
   cout << "Did you honestly think your choices have mattered up until now?";
   cin.get();
-}
+} 
 }
 
 // This is the final dialogue of the entire game.
