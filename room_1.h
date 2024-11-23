@@ -41,7 +41,7 @@ bool door_1 (){
 	// it pretty much checks if answer is 5 or not and tells users if its # is to large 
     cout << "If you need to go back and look at the puzzles, enter 0 to cancel.\n";
 int passcode_1;
-cout << "Please enter the passcode:\n";
+cout << "Please enter the passcode: ";
 while(true) {
 	set_raw_mode(false);
 	cin >> passcode_1;
