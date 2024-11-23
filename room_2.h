@@ -100,7 +100,7 @@ cin.get();
 		return 1;
 		}
 	else if (passcode_2 == 0) {
-		return 0;
+		break;
 		}
 	else if (passcode_2 > 999 || passcode_2 < 100) {
 		cout << "The passcode is a three digit integer.\n";
@@ -111,4 +111,4 @@ cin.get();
 		}
 } set_raw_mode(true);
 return 0;
-};
+}
